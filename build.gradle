@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'application'
+}
+
+group = 'com.number.parser'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+mainClassName = "com.number.parser.NumberParserApplication"
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation 'junit:junit:4.13.1'
+	testImplementation group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.8.2'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
